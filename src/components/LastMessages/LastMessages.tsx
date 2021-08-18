@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import { Arrow } from "../icons";
 import LastMessagesItem from "../LastMessagesItem/LastMessagesItem";
-import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
+import BottomNavigation from "../BottomNavigation/BottomNavigation";
 import "./LastMessages.scss";
 const LastMessages = ({ messages, users }) => {
   let { id } = useParams();

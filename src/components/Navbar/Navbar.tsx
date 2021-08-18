@@ -10,7 +10,7 @@ import {
   Saved,
   Settings,
   User,
-} from "../../components/icons";
+} from "../icons";
 import NotificationsCard from "../NotificationsCard/NotificationsCard";
 const Navbar = () => {
   let path = useLocation().pathname;

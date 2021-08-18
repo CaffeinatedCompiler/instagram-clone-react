@@ -7,10 +7,10 @@ import {
   Heart,
   Search,
   Add,
-} from "../../components/icons";
+} from "../icons";
 
 const BottomNavigation = () => {
-  let { pathname } = useLocation();
+  const { pathname } = useLocation();
   return (
     <nav className="bottom-navigation">
       <Link className="bottom-menu-item" to="/home">
