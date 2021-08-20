@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Arrow(props) {
+export default function Arrow(props) {
   return (
     <svg
       aria-label="Chevron icon to see all Follow Requests"
@@ -16,5 +16,3 @@ function Arrow(props) {
     </svg>
   );
 }
-
-export default Arrow;

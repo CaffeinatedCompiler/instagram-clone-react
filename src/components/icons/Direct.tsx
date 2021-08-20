@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function DirectIcon(props) {
+export default function DirectIcon(props) {
   if (props.active) {
     return (
       <svg fill="#262626" height={22} viewBox="0 0 48 48" width={22} {...props}>
@@ -22,5 +22,3 @@ function DirectIcon(props) {
     </svg>
   );
 }
-
-export default DirectIcon;

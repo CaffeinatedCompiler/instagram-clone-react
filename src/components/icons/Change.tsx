@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Change(props) {
+export default function Change(props) {
   return (
     <svg
       aria-label="Hesap De\u011Fi\u015Ftir"
@@ -15,5 +15,3 @@ function Change(props) {
     </svg>
   );
 }
-
-export default Change;

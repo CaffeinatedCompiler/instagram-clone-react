@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Settings(props) {
+export default function Settings(props) {
   return (
     <svg
       aria-label="Ayarlar"
@@ -16,4 +16,3 @@ function Settings(props) {
   );
 }
 
-export default Settings;

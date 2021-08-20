@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Search(props) {
+export default function Search(props) {
   if (props.active) {
     return (
       <svg fill="#262626" height={24} viewBox="0 0 48 48" width={24} {...props}>
@@ -16,4 +16,3 @@ function Search(props) {
   );
 }
 
-export default Search;

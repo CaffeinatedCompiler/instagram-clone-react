@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Photo(props) {
+export default function Photo(props) {
   return (
     <svg
       aria-label="Add Photo or Video"
@@ -16,4 +16,3 @@ function Photo(props) {
   );
 }
 
-export default Photo;

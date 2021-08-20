@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function User(props) {
+export default function User(props) {
   return (
     <svg
       aria-label="Profil"
@@ -15,5 +15,3 @@ function User(props) {
     </svg>
   );
 }
-
-export default User;

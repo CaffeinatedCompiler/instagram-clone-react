@@ -1,7 +1,7 @@
 import React from "react";
 import "./ExploreRowCards.scss";
 
-const ExploreRowCards = () => {
+export default function ExploreRowCards() {
   return (
     <div className="exploreRow">
       <div className="exploreItem">
@@ -16,5 +16,3 @@ const ExploreRowCards = () => {
     </div>
   );
 };
-
-export default ExploreRowCards;

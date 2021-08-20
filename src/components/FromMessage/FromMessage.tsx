@@ -1,7 +1,7 @@
 import React from "react";
 import { More } from "../icons";
 import "./FromMessage.scss";
-const FromMessage = ({ userImage, message }: {userImage: string, message: string}) => {
+export default function FromMessage({ userImage, message }: {userImage: string, message: string}){
   return (
     <div className="fromMessageItem">
       <img src={userImage} alt="chatHeaderAvatar" />
@@ -12,5 +12,3 @@ const FromMessage = ({ userImage, message }: {userImage: string, message: string
     </div>
   );
 };
-
-export default FromMessage;

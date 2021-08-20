@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import "./HomeBox.scss";
-const HomeBox = ({ children }) => {
+export default function HomeBox({ children }) {
   return (
     <div className="home">
       <Navbar />
@@ -9,5 +9,3 @@ const HomeBox = ({ children }) => {
     </div>
   );
 };
-
-export default HomeBox;

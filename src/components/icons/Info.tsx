@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Info(props) {
+export default function Info(props) {
   return (
     <svg
       aria-label="View Thread Details"
@@ -18,5 +18,3 @@ function Info(props) {
     </svg>
   );
 }
-
-export default Info;

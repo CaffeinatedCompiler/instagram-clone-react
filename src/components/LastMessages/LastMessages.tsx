@@ -3,9 +3,10 @@ import { useParams } from "react-router";
 import { Arrow } from "../icons";
 import LastMessagesItem from "../LastMessagesItem/LastMessagesItem";
 import BottomNavigation from "../BottomNavigation/BottomNavigation";
+import { MessageData, User } from '../../types/index';
 import "./LastMessages.scss";
-const LastMessages = ({ messages, users }) => {
-  let { id } = useParams();
+export default function LastMessages({ messages, users }: { messages: MessageData[], users: User[] } ) {
+  const { id } = useParams();
   return (
     <div className={`lastMessagesCol ${id && "hide"}`}>
       <div className="lastMessagesHeader">
@@ -30,5 +31,3 @@ const LastMessages = ({ messages, users }) => {
     </div>
   );
 };
-
-export default LastMessages;

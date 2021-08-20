@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Comment(props) {
+export default function Comment(props) {
   return (
     <svg
       aria-label="Comment"
@@ -19,5 +19,3 @@ function Comment(props) {
     </svg>
   );
 }
-
-export default Comment;

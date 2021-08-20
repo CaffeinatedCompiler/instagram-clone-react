@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Tagged(props) {
+export default function Tagged(props) {
   return (
     <svg
       aria-label="Tagged"
@@ -16,4 +16,3 @@ function Tagged(props) {
   );
 }
 
-export default Tagged;

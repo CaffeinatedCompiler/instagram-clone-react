@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Discovery(props) {
+export default function Discovery(props) {
   if (props.active) {
     return (
       <svg fill="#262626" height={22} viewBox="0 0 48 48" width={22} {...props}>
@@ -30,5 +30,3 @@ function Discovery(props) {
     </svg>
   );
 }
-
-export default Discovery;

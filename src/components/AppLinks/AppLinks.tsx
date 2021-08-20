@@ -1,6 +1,6 @@
 import React from "react";
 import "./AppLinks.scss";
-const AppLinks = () => {
+export default function AppLinks() {
   return (
     <div className="appLinks">
       <span>Get the app.</span>
@@ -17,5 +17,3 @@ const AppLinks = () => {
     </div>
   );
 };
-
-export default AppLinks;

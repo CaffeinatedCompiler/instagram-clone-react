@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Igtv(props) {
+export default function Igtv(props) {
   return (
     <svg
       aria-label="Posts"
@@ -15,5 +15,3 @@ function Igtv(props) {
     </svg>
   );
 }
-
-export default Igtv;

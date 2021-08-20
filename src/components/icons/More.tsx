@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function More(props) {
+export default function More(props) {
   return (
     <svg
       aria-label="More options"
@@ -18,4 +18,3 @@ function More(props) {
   );
 }
 
-export default More;

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Posts(props) {
+export default function Posts(props) {
   return (
     <svg
       aria-label="Posts"
@@ -20,4 +20,3 @@ function Posts(props) {
   );
 }
 
-export default Posts;

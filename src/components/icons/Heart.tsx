@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Heart(props) {
+export default function Heart(props) {
   if (props.active) {
     return (
       <svg fill="#262626" height={22} viewBox="0 0 48 48" width={22} {...props}>
@@ -22,5 +22,3 @@ function Heart(props) {
     </svg>
   );
 }
-
-export default Heart;

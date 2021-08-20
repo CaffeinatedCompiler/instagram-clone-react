@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Smile(props) {
+export default function Smile(props) {
   return (
     <svg
       aria-label="Emoji"
@@ -17,4 +17,3 @@ function Smile(props) {
   );
 }
 
-export default Smile;

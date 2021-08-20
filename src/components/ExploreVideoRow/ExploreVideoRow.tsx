@@ -1,7 +1,7 @@
 import React from "react";
 import "./ExploreVideoRow.scss";
 
-const ExploreVideoRow = () => {
+export default function ExploreVideoRow() {
   return (
     <div className="exploreBigRowCards">
       <div className="exploreSmallCards">
@@ -20,5 +20,3 @@ const ExploreVideoRow = () => {
     </div>
   );
 };
-
-export default ExploreVideoRow;

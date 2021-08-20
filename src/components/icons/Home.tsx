@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function HomeIcon(props) {
+export default function HomeIcon(props) {
   if (props.active) {
     return (
       <svg fill="#262626" height={22} viewBox="0 0 48 48" width={22} {...props}>
@@ -14,5 +14,3 @@ function HomeIcon(props) {
     </svg>
   );
 }
-
-export default HomeIcon;

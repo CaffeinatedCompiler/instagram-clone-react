@@ -4,7 +4,7 @@ import { addMessageAction } from "../../redux/actions/messagesAction";
 import { Heart, Photo, Smile } from "../icons";
 import "./ChatInputs.scss";
 
-const ChatInputs = ({ to }) => {
+export default function ChatInputs({ to }: {to: string}) {
   const dispatch = useDispatch();
   const [message, setMessage] = React.useState("");
   const sendMessage = (e) => {
@@ -32,5 +32,3 @@ const ChatInputs = ({ to }) => {
     </div>
   );
 };
-
-export default ChatInputs;

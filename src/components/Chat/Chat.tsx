@@ -1,18 +1,18 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 import ChatInputs from "../ChatInputs/ChatInputs";
 import FromMessage from "../FromMessage/FromMessage";
 import { Info } from "../icons";
 import MyMessage from "../MyMessage/MyMessage";
+import { MessageData, User } from "../../types/index";
 import "./Chat.scss";
 
-const Chat = ({ messages, users }) => {
-  let { id } = useParams();
-  const [messagesData, setMessagesData] = React.useState();
-  const [user, setUser] = React.useState();
+export default function Chat({ messages, users }: { messages: MessageData[], users: User[] }) {
+  const { id } = useParams<{id: string}>();
+  const [messagesData, setMessagesData] = React.useState<MessageData>();
+  const [user, setUser] = React.useState<User>();
   React.useEffect(() => {
-    var element = document.querySelector(".chatMessages");
+    var element = document.querySelector(".chatMessages") as HTMLDivElement;
     element.scrollTop = element.scrollHeight;
   }, []);
 
@@ -32,7 +32,7 @@ const Chat = ({ messages, users }) => {
         <Info />
       </div>
       <div className="chatMessages">
-        {messagesData &&
+        {(messagesData && user) &&
           messagesData.messages.map((message) => {
             if (message.from === user.username) {
               return (
@@ -50,5 +50,3 @@ const Chat = ({ messages, users }) => {
     </div>
   );
 };
-
-export default Chat;

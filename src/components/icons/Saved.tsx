@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function Saved(props) {
+export default function Saved(props) {
   return (
     <svg
       aria-label="Save"
@@ -18,5 +18,3 @@ function Saved(props) {
     </svg>
   );
 }
-
-export default Saved;

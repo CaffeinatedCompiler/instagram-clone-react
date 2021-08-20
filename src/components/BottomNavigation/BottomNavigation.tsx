@@ -9,7 +9,7 @@ import {
   Add,
 } from "../icons";
 
-const BottomNavigation = () => {
+export default function BottomNavigation() {
   const { pathname } = useLocation();
   return (
     <nav className="bottom-navigation">
@@ -19,10 +19,10 @@ const BottomNavigation = () => {
       <Link className="bottom-menu-item" to="/explore">
         <Search active={pathname === "/explore"} />
       </Link>
-      <Link className="bottom-menu-item">
+      <Link className="bottom-menu-item" to="/add">
         <Add active={pathname === "/add"} />
       </Link>
-      <Link className="bottom-menu-item">
+      <Link className="bottom-menu-item" to="favorite">
         <Heart active={pathname === "/favorite"} />
       </Link>
       <Link className="bottom-menu-item" to="/mucahitsah">
@@ -31,5 +31,3 @@ const BottomNavigation = () => {
     </nav>
   );
 };
-
-export default BottomNavigation;
