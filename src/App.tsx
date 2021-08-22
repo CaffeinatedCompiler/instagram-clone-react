@@ -7,7 +7,7 @@ import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
 import Signin from "./pages/Signin/Signin";
 
-function App() {
+export default function App() {
   return (
     <Switch>
       <Route exact path="/" component={Login} />
@@ -20,5 +20,3 @@ function App() {
     </Switch>
   );
 }
-
-export default App;

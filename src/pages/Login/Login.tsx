@@ -4,7 +4,7 @@ import AppLinks from "../../components/AppLinks/AppLinks";
 import PhoneSlide from "../../components/PhoneSlide/PhoneSlide";
 import "./Login.scss";
 
-const Login = () => {
+export default function Login() {
   let history = useHistory();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -87,5 +87,3 @@ const Login = () => {
     </div>
   );
 };
-
-export default Login;

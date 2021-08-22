@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import AppLinks from "../../components/AppLinks/AppLinks";
 import "./Signin.scss";
-const Signin = () => {
+export default function Signin() {
   const loginBt = React.useRef();
   let history = useHistory();
   const [email, setEmail] = React.useState("");
@@ -114,4 +114,3 @@ const Signin = () => {
   );
 };
 
-export default Signin;

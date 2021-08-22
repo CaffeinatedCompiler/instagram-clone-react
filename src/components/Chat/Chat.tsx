@@ -9,8 +9,8 @@ import "./Chat.scss";
 
 export default function Chat({ messages, users }: { messages: MessageData[], users: User[] }) {
   const { id } = useParams<{id: string}>();
-  const [messagesData, setMessagesData] = React.useState<MessageData>();
-  const [user, setUser] = React.useState<User>();
+  const [messagesData, setMessagesData] = React.useState<MessageData | null>(null);
+  const [user, setUser] = React.useState<User | null>(null);
   React.useEffect(() => {
     var element = document.querySelector(".chatMessages") as HTMLDivElement;
     element.scrollTop = element.scrollHeight;

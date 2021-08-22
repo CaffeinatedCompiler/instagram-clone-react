@@ -7,8 +7,8 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 import Chat from "../../components/Chat/Chat";
 
-const Direct = () => {
-  let { id } = useParams();
+export default function Direct () {
+  const { id } = useParams<{id: string}>();
   let messages = useSelector((state) => state.messages);
   let users = useSelector((state) => state.users);
   return (
@@ -20,5 +20,3 @@ const Direct = () => {
     </HomeBox>
   );
 };
-
-export default Direct;

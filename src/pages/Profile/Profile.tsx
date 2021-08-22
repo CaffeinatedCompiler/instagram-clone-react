@@ -6,8 +6,8 @@ import ExploreRowCards from "../../components/ExploreRowCards/ExploreRowCards";
 import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
 import { useParams } from "react-router";
 
-const Profile = () => {
-  let { id } = useParams();
+export default function Profile(){
+  const { id } = useParams<{id: string}>();
   const [userImage, setUserImage] = React.useState();
   React.useEffect(() => {
     if (id === "mucahitsah") {
@@ -88,4 +88,3 @@ const Profile = () => {
   );
 };
 
-export default Profile;

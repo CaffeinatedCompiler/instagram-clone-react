@@ -6,8 +6,8 @@ import Post from "../../components/Post/Post";
 import Suggestions from "../../components/Suggestions/Suggestions";
 import "./Home.scss";
 
-const Home = () => {
-  let posts = useSelector((state) => state.posts);
+export default function Home() {
+  const posts = useSelector((state) => state.posts);
   return (
     <HomeBox>
       <div className="feed">
@@ -30,5 +30,3 @@ const Home = () => {
     </HomeBox>
   );
 };
-
-export default Home;
