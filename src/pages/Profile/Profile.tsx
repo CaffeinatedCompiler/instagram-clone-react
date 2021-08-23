@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "./Profile.scss";
 import HomeBox from "../../components/HomeBox/HomeBox";
 import { Igtv, Posts, Saved, Settings, Tagged } from "../../components/icons";
@@ -8,8 +8,8 @@ import { useParams } from "react-router";
 
 export default function Profile(){
   const { id } = useParams<{id: string}>();
-  const [userImage, setUserImage] = React.useState();
-  React.useEffect(() => {
+  const [userImage, setUserImage] = useState<string>('');
+  useEffect(() => {
     if (id === "mucahitsah") {
       //my profile photo
       setUserImage("https://avatars.githubusercontent.com/u/38807255");

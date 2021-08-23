@@ -1,9 +1,8 @@
-import React from "react";
 import { Arrow } from "../icons";
 import "./NotificationsCard.scss";
 import NotificationCardItem from "./NotificationCardItem/NotificationCardItem";
 
-const NotificationsCard = () => {
+export default function NotificationsCard() {
   return (
     <div className="notificationCard arrow-top">
       <div className="followRequests">
@@ -32,4 +31,3 @@ const NotificationsCard = () => {
   );
 };
 
-export default NotificationsCard;

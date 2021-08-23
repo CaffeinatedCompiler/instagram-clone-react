@@ -1,4 +1,3 @@
-import React from "react";
 import "./ExploreRowCards.scss";
 
 export default function ExploreRowCards() {

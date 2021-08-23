@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import AppLinks from "../../components/AppLinks/AppLinks";
 import PhoneSlide from "../../components/PhoneSlide/PhoneSlide";
@@ -6,10 +6,10 @@ import "./Login.scss";
 
 export default function Login() {
   let history = useHistory();
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
-  const loginBt = React.useRef();
-  React.useEffect(() => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const loginBt = useRef();
+ useEffect(() => {
     if (email !== "" && password !== "") {
       loginBt.current.disabled = false;
     } else {

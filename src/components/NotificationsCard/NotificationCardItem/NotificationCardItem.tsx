@@ -1,6 +1,5 @@
-import React from "react";
 import "./NotificationCardItem.scss";
-const ThisWeekItem = () => {
+export default function ThisWeekItem(){
   return (
     <div className="notificationCardItem">
       <div className="notificationCardItemAvatar">
@@ -18,4 +17,3 @@ const ThisWeekItem = () => {
   );
 };
 
-export default ThisWeekItem;

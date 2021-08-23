@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router";
 import { Arrow } from "../icons";
 import LastMessagesItem from "../LastMessagesItem/LastMessagesItem";
@@ -6,7 +5,7 @@ import BottomNavigation from "../BottomNavigation/BottomNavigation";
 import { MessageData, User } from '../../types/index';
 import "./LastMessages.scss";
 export default function LastMessages({ messages, users }: { messages: MessageData[], users: User[] } ) {
-  const { id } = useParams();
+  const { id } = useParams<{id: string}>();
   return (
     <div className={`lastMessagesCol ${id && "hide"}`}>
       <div className="lastMessagesHeader">

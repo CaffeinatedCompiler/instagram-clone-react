@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { addMessageAction } from "../../redux/actions/messagesAction";
 import { Heart, Photo, Smile } from "../icons";
@@ -6,7 +6,7 @@ import "./ChatInputs.scss";
 
 export default function ChatInputs({ to }: {to: string}) {
   const dispatch = useDispatch();
-  const [message, setMessage] = React.useState("");
+  const [message, setMessage] = useState("");
   const sendMessage = (e) => {
     if (e.key === "Enter") {
       if (to !== "" && message !== "") {

@@ -1,7 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./LastMessagesItem.scss";
-const LastMessagesItem = ({ userImage, username, lastMessage }) => {
+const LastMessagesItem = ({ userImage, username, lastMessage }: {userImage: string, username: string, lastMessage: string}) => {
   return (
     <Link
       to={`/direct/${username}`}

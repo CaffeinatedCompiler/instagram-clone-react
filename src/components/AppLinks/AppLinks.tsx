@@ -1,4 +1,3 @@
-import React from "react";
 import "./AppLinks.scss";
 export default function AppLinks() {
   return (

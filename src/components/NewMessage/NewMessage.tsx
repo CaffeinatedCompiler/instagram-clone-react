@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Direct } from "../icons";
 import "./NewMessage.scss";
 const NewMessage = () => {

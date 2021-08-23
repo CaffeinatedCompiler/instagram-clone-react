@@ -1,4 +1,3 @@
-import React from "react";
 import "./Suggestions.scss";
 import SuggestionUsersItem from "./SuggestionUsersItem/SuggestionUsersItem";
 const Suggestions = () => {

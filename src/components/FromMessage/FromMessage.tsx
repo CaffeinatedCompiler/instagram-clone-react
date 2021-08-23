@@ -1,4 +1,3 @@
-import React from "react";
 import { More } from "../icons";
 import "./FromMessage.scss";
 export default function FromMessage({ userImage, message }: {userImage: string, message: string}){

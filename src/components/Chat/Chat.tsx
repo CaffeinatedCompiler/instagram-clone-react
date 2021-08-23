@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from 'react'
 import { useParams } from "react-router";
 import ChatInputs from "../ChatInputs/ChatInputs";
 import FromMessage from "../FromMessage/FromMessage";
@@ -9,14 +9,14 @@ import "./Chat.scss";
 
 export default function Chat({ messages, users }: { messages: MessageData[], users: User[] }) {
   const { id } = useParams<{id: string}>();
-  const [messagesData, setMessagesData] = React.useState<MessageData | null>(null);
-  const [user, setUser] = React.useState<User | null>(null);
-  React.useEffect(() => {
+  const [messagesData, setMessagesData] = useState<MessageData | null>(null);
+  const [user, setUser] = useState<User | null>(null);
+  useEffect(() => {
     var element = document.querySelector(".chatMessages") as HTMLDivElement;
     element.scrollTop = element.scrollHeight;
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setMessagesData(messages.find((message) => message.to === id));
     setUser(users.find((user) => user.username === id));
   }, [id]);

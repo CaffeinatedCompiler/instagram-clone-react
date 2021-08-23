@@ -1,7 +1,6 @@
-import React from "react";
 import { More } from "../icons";
 import "./MyMessage.scss";
-const MyMessage = ({ message }) => {
+const MyMessage = ({ message }: { message: string }) => {
   return (
     <div className="myMessageItem">
       <More />

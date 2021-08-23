@@ -1,4 +1,3 @@
-import React from "react";
 import "./ExploreVideoRow.scss";
 
 export default function ExploreVideoRow() {

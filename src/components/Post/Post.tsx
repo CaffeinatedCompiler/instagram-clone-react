@@ -1,12 +1,15 @@
-import React from "react";
 import { Comment, Direct, Heart, More, Saved, Smile } from "../icons";
 import "./Post.scss";
 const Post = ({
   userImage,
   username,
-  displayName,
   postImage,
   postDescription,
+}: {
+  userImage: string,
+  username: string,
+  postImage: string,
+  postDescription: string
 }) => {
   return (
     <article className="post">

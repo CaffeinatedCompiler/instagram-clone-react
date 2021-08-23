@@ -1,4 +1,3 @@
-import React from "react";
 import NewMessage from "../../components/NewMessage/NewMessage";
 import HomeBox from "../../components/HomeBox/HomeBox";
 import "./Direct.scss";

@@ -1,15 +1,15 @@
-import React from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import AppLinks from "../../components/AppLinks/AppLinks";
 import "./Signin.scss";
 export default function Signin() {
-  const loginBt = React.useRef();
+  const loginBt = useRef();
   let history = useHistory();
-  const [email, setEmail] = React.useState("");
-  const [displayName, setDisplayName] = React.useState("");
-  const [username, setUsername] = React.useState("");
-  const [password, setPassword] = React.useState("");
-  React.useEffect(() => {
+  const [email, setEmail] = useState("");
+  const [displayName, setDisplayName] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  useEffect(() => {
     if (
       email !== "" &&
       password !== "" &&

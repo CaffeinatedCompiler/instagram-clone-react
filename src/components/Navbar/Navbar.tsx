@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "./Navbar.scss";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import {
@@ -15,11 +15,11 @@ import NotificationsCard from "../NotificationsCard/NotificationsCard";
 const Navbar = () => {
   let path = useLocation().pathname;
   let history = useHistory();
-  const [menuOpen, setMenuOpen] = React.useState(false);
-  const [notificationOpen, setNotificationOpen] = React.useState(false);
-  const [activeIcon, setActiveIcon] = React.useState(1);
-  const [searchValue, setSearchValue] = React.useState("");
-  React.useEffect(() => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [notificationOpen, setNotificationOpen] = useState(false);
+  const [activeIcon, setActiveIcon] = useState(1);
+  const [searchValue, setSearchValue] = useState("");
+  useEffect(() => {
     if (path === "/home") setActiveIcon(1);
     else if (path === "/direct" || path.split("/")[1] === "direct")
       setActiveIcon(2);

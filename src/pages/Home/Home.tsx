@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import HomeBox from "../../components/HomeBox/HomeBox";
 import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
