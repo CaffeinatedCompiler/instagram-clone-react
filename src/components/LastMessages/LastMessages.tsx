@@ -1,13 +1,19 @@
-import { useParams } from "react-router";
-import { Arrow } from "../icons";
-import LastMessagesItem from "../LastMessagesItem/LastMessagesItem";
-import BottomNavigation from "../BottomNavigation/BottomNavigation";
+import { useParams } from 'react-router';
+import { Arrow } from '../icons';
+import LastMessagesItem from '../LastMessagesItem/LastMessagesItem';
+import BottomNavigation from '../BottomNavigation/BottomNavigation';
 import { MessageData, User } from '../../types/index';
-import "./LastMessages.scss";
-export default function LastMessages({ messages, users }: { messages: MessageData[], users: User[] } ) {
-  const { id } = useParams<{id: string}>();
+import './LastMessages.scss';
+export default function LastMessages({
+  messages,
+  users,
+}: {
+  messages: MessageData[];
+  users: User[];
+}) {
+  const { id } = useParams<{ id: string }>();
   return (
-    <div className={`lastMessagesCol ${id && "hide"}`}>
+    <div className={`lastMessagesCol ${id && 'hide'}`}>
       <div className="lastMessagesHeader">
         <span>mucahitsah</span>
         <Arrow />
@@ -29,4 +35,4 @@ export default function LastMessages({ messages, users }: { messages: MessageDat
       </div>
     </div>
   );
-};
+}

@@ -1,5 +1,5 @@
-import Navbar from "../Navbar/Navbar";
-import "./HomeBox.scss";
+import Navbar from '../Navbar/Navbar';
+import './HomeBox.scss';
 export default function HomeBox({ children }) {
   return (
     <div className="home">
@@ -7,4 +7,4 @@ export default function HomeBox({ children }) {
       <div className="content">{children}</div>
     </div>
   );
-};
+}

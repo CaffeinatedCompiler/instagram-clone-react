@@ -1,29 +1,19 @@
-import { useState, useEffect } from "react";
-import "./Navbar.scss";
-import { Link, useHistory, useLocation } from "react-router-dom";
-import {
-  Change,
-  Direct,
-  Explore,
-  Heart,
-  Home as HomeIcon,
-  Saved,
-  Settings,
-  User,
-} from "../icons";
-import NotificationsCard from "../NotificationsCard/NotificationsCard";
+import { useState, useEffect } from 'react';
+import './Navbar.scss';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Change, Direct, Explore, Heart, Home as HomeIcon, Saved, Settings, User } from '../icons';
+import NotificationsCard from '../NotificationsCard/NotificationsCard';
 const Navbar = () => {
   let path = useLocation().pathname;
   let history = useHistory();
   const [menuOpen, setMenuOpen] = useState(false);
   const [notificationOpen, setNotificationOpen] = useState(false);
   const [activeIcon, setActiveIcon] = useState(1);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState('');
   useEffect(() => {
-    if (path === "/home") setActiveIcon(1);
-    else if (path === "/direct" || path.split("/")[1] === "direct")
-      setActiveIcon(2);
-    else if (path === "/explore") setActiveIcon(3);
+    if (path === '/home') setActiveIcon(1);
+    else if (path === '/direct' || path.split('/')[1] === 'direct') setActiveIcon(2);
+    else if (path === '/explore') setActiveIcon(3);
   }, []);
   return (
     <nav>
@@ -34,15 +24,13 @@ const Navbar = () => {
             alt="Instagram Logo"
           />
         </div>
-        <div className={`navSearchInput ${searchValue !== "" && "labelHide"}`}>
+        <div className={`navSearchInput ${searchValue !== '' && 'labelHide'}`}>
           <input
             id="searchInput"
             type="text"
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
-            onKeyPress={(e) =>
-              e.key === "Enter" && history.push("/" + searchValue)
-            }
+            onKeyPress={(e) => e.key === 'Enter' && history.push('/' + searchValue)}
           />
           <label for="searchInput">Search</label>
         </div>
@@ -67,9 +55,7 @@ const Navbar = () => {
             {notificationOpen && <NotificationsCard />}
           </Link>
           <div
-            className={`closePanel ${
-              menuOpen || notificationOpen ? "active" : ""
-            }`}
+            className={`closePanel ${menuOpen || notificationOpen ? 'active' : ''}`}
             onClick={() => {
               setMenuOpen(false);
               setNotificationOpen(false);
@@ -86,7 +72,7 @@ const Navbar = () => {
                   <Link
                     className="menuItem"
                     to="/mucahitsah"
-                    style={{ textDecoration: "none", color: "inherit" }}
+                    style={{ textDecoration: 'none', color: 'inherit' }}
                   >
                     <User />
                     <span>Profile</span>

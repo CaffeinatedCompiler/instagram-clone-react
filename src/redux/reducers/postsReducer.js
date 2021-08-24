@@ -1,4 +1,4 @@
-import posts from "../../data/posts";
+import posts from '../../data/posts';
 
 const initialState = posts;
 function postsReducer(state = initialState, action) {

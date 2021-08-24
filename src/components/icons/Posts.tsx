@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export default function Posts(props) {
   return (
@@ -19,4 +19,3 @@ export default function Posts(props) {
     </svg>
   );
 }
-

@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import "./PhoneSlide.scss";
+import { useState, useEffect } from 'react';
+import './PhoneSlide.scss';
 
 export default function PhoneSlide() {
   var imgs = [
-    "https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg",
-    "https://www.instagram.com/static/images/homepage/screenshot2.jpg/6f03eb85463c.jpg",
-    "https://www.instagram.com/static/images/homepage/screenshot3.jpg/f0c687aa6ec2.jpg",
-    "https://www.instagram.com/static/images/homepage/screenshot4.jpg/842fe5699220.jpg",
+    'https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg',
+    'https://www.instagram.com/static/images/homepage/screenshot2.jpg/6f03eb85463c.jpg',
+    'https://www.instagram.com/static/images/homepage/screenshot3.jpg/f0c687aa6ec2.jpg',
+    'https://www.instagram.com/static/images/homepage/screenshot4.jpg/842fe5699220.jpg',
   ];
   const [slideIndex, setSlideIndex] = useState(0);
   useEffect(() => {
@@ -25,5 +25,4 @@ export default function PhoneSlide() {
       </div>
     </div>
   );
-};
-
+}

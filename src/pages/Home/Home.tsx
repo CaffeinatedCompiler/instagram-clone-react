@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux";
-import HomeBox from "../../components/HomeBox/HomeBox";
-import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
-import Post from "../../components/Post/Post";
-import Suggestions from "../../components/Suggestions/Suggestions";
-import "./Home.scss";
+import { useSelector } from 'react-redux';
+import HomeBox from '../../components/HomeBox/HomeBox';
+import BottomNavigation from '../../components/BottomNavigation/BottomNavigation';
+import Post from '../../components/Post/Post';
+import Suggestions from '../../components/Suggestions/Suggestions';
+import './Home.scss';
 
 export default function Home() {
   const posts = useSelector((state) => state.posts);
@@ -28,4 +28,4 @@ export default function Home() {
       </div>
     </HomeBox>
   );
-};
+}

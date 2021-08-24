@@ -1,5 +1,5 @@
-import "./Suggestions.scss";
-import SuggestionUsersItem from "./SuggestionUsersItem/SuggestionUsersItem";
+import './Suggestions.scss';
+import SuggestionUsersItem from './SuggestionUsersItem/SuggestionUsersItem';
 const Suggestions = () => {
   return (
     <div className="suggestions">

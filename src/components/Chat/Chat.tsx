@@ -1,18 +1,18 @@
-import { useState, useEffect } from 'react'
-import { useParams } from "react-router";
-import ChatInputs from "../ChatInputs/ChatInputs";
-import FromMessage from "../FromMessage/FromMessage";
-import { Info } from "../icons";
-import MyMessage from "../MyMessage/MyMessage";
-import { MessageData, User } from "../../types/index";
-import "./Chat.scss";
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router';
+import ChatInputs from '../ChatInputs/ChatInputs';
+import FromMessage from '../FromMessage/FromMessage';
+import { Info } from '../icons';
+import MyMessage from '../MyMessage/MyMessage';
+import { MessageData, User } from '../../types/index';
+import './Chat.scss';
 
-export default function Chat({ messages, users }: { messages: MessageData[], users: User[] }) {
-  const { id } = useParams<{id: string}>();
+export default function Chat({ messages, users }: { messages: MessageData[]; users: User[] }) {
+  const { id } = useParams<{ id: string }>();
   const [messagesData, setMessagesData] = useState<MessageData | null>(null);
   const [user, setUser] = useState<User | null>(null);
   useEffect(() => {
-    var element = document.querySelector(".chatMessages") as HTMLDivElement;
+    var element = document.querySelector('.chatMessages') as HTMLDivElement;
     element.scrollTop = element.scrollHeight;
   }, []);
 
@@ -32,15 +32,11 @@ export default function Chat({ messages, users }: { messages: MessageData[], use
         <Info />
       </div>
       <div className="chatMessages">
-        {(messagesData && user) &&
+        {messagesData &&
+          user &&
           messagesData.messages.map((message) => {
             if (message.from === user.username) {
-              return (
-                <FromMessage
-                  userImage={user.userimage}
-                  message={message.message}
-                />
-              );
+              return <FromMessage userImage={user.userimage} message={message.message} />;
             } else {
               return <MyMessage message={message.message} />;
             }
@@ -49,4 +45,4 @@ export default function Chat({ messages, users }: { messages: MessageData[], use
       <ChatInputs to={user && user.username} />
     </div>
   );
-};
+}

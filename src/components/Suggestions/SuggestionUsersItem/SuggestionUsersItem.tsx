@@ -1,5 +1,13 @@
-import "./SuggestionUsersItem.scss";
-const SuggestionUsersItem = ({ userImage, username, displayName }: { userImage: string, username: string, displayName: string }) => {
+import './SuggestionUsersItem.scss';
+const SuggestionUsersItem = ({
+  userImage,
+  username,
+  displayName,
+}: {
+  userImage: string;
+  username: string;
+  displayName: string;
+}) => {
   return (
     <div className="suggestionUsersItem">
       <div className="suggestionUsersItemAvatar">

@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react";
-import "./Profile.scss";
-import HomeBox from "../../components/HomeBox/HomeBox";
-import { Igtv, Posts, Saved, Settings, Tagged } from "../../components/icons";
-import ExploreRowCards from "../../components/ExploreRowCards/ExploreRowCards";
-import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
-import { useParams } from "react-router";
+import { useState, useEffect } from 'react';
+import './Profile.scss';
+import HomeBox from '../../components/HomeBox/HomeBox';
+import { Igtv, Posts, Saved, Settings, Tagged } from '../../components/icons';
+import ExploreRowCards from '../../components/ExploreRowCards/ExploreRowCards';
+import BottomNavigation from '../../components/BottomNavigation/BottomNavigation';
+import { useParams } from 'react-router';
 
-export default function Profile(){
-  const { id } = useParams<{id: string}>();
+export default function Profile() {
+  const { id } = useParams<{ id: string }>();
   const [userImage, setUserImage] = useState<string>('');
   useEffect(() => {
-    if (id === "mucahitsah") {
+    if (id === 'mucahitsah') {
       //my profile photo
-      setUserImage("https://avatars.githubusercontent.com/u/38807255");
+      setUserImage('https://avatars.githubusercontent.com/u/38807255');
     } else {
       //random profilPhoto
-      setUserImage("https://picsum.photos/200");
+      setUserImage('https://picsum.photos/200');
     }
   }, [id]);
   return (
@@ -86,5 +86,4 @@ export default function Profile(){
       </div>
     </HomeBox>
   );
-};
-
+}

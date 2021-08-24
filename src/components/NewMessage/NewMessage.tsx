@@ -1,6 +1,5 @@
-
-import { Direct } from "../icons";
-import "./NewMessage.scss";
+import { Direct } from '../icons';
+import './NewMessage.scss';
 const NewMessage = () => {
   return (
     <div className="newMessage">

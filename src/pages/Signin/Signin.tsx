@@ -1,21 +1,16 @@
-import { useState, useEffect, useRef } from "react";
-import { Link, useHistory } from "react-router-dom";
-import AppLinks from "../../components/AppLinks/AppLinks";
-import "./Signin.scss";
+import { useState, useEffect, useRef } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import AppLinks from '../../components/AppLinks/AppLinks';
+import './Signin.scss';
 export default function Signin() {
   const loginBt = useRef();
   let history = useHistory();
-  const [email, setEmail] = useState("");
-  const [displayName, setDisplayName] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [displayName, setDisplayName] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   useEffect(() => {
-    if (
-      email !== "" &&
-      password !== "" &&
-      username !== "" &&
-      displayName !== ""
-    ) {
+    if (email !== '' && password !== '' && username !== '' && displayName !== '') {
       loginBt.current.disabled = false;
     } else {
       loginBt.current.disabled = true;
@@ -24,7 +19,7 @@ export default function Signin() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    history.push("/home");
+    history.push('/home');
   };
 
   return (
@@ -50,7 +45,7 @@ export default function Signin() {
           <div className="orBorder"></div>
         </div>
         <form onSubmit={(e) => onSubmit(e)}>
-          <div className={`textInput ${email.length > 0 && "active"}`}>
+          <div className={`textInput ${email.length > 0 && 'active'}`}>
             <input
               id="email"
               type="text"
@@ -59,7 +54,7 @@ export default function Signin() {
             />
             <label for="email">Mobile Number or Email</label>
           </div>
-          <div className={`textInput ${displayName.length > 0 && "active"}`}>
+          <div className={`textInput ${displayName.length > 0 && 'active'}`}>
             <input
               id="displayName"
               type="text"
@@ -68,7 +63,7 @@ export default function Signin() {
             />
             <label for="displayName">Full Name</label>
           </div>
-          <div className={`textInput ${username.length > 0 && "active"}`}>
+          <div className={`textInput ${username.length > 0 && 'active'}`}>
             <input
               id="username"
               type="text"
@@ -77,7 +72,7 @@ export default function Signin() {
             />
             <label for="username">Username</label>
           </div>
-          <div className={`textInput ${password.length > 0 && "active"}`}>
+          <div className={`textInput ${password.length > 0 && 'active'}`}>
             <input
               id="password"
               type="password"
@@ -93,17 +88,14 @@ export default function Signin() {
           </div>
         </form>
         <div className="acceptTerm">
-          <span>
-            By signing up, you agree to our Terms , Data Policy and Cookies
-            Policy .
-          </span>
+          <span>By signing up, you agree to our Terms , Data Policy and Cookies Policy .</span>
         </div>
       </div>
 
       <div className="loginMiniPanel">
         <span>Have an account?</span>
         <span>
-          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
             Log in
           </Link>
         </span>
@@ -112,5 +104,4 @@ export default function Signin() {
       <AppLinks />
     </div>
   );
-};
-
+}

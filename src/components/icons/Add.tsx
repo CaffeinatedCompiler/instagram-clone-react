@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export default function Add(props) {
   return (
@@ -9,4 +9,3 @@ export default function Add(props) {
     </svg>
   );
 }
-

@@ -1,4 +1,4 @@
-import "./ExploreRowCards.scss";
+import './ExploreRowCards.scss';
 
 export default function ExploreRowCards() {
   return (
@@ -14,4 +14,4 @@ export default function ExploreRowCards() {
       </div>
     </div>
   );
-};
+}

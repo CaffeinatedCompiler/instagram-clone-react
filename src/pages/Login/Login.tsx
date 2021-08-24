@@ -1,16 +1,16 @@
-import { useState, useEffect, useRef } from "react";
-import { Link, useHistory } from "react-router-dom";
-import AppLinks from "../../components/AppLinks/AppLinks";
-import PhoneSlide from "../../components/PhoneSlide/PhoneSlide";
-import "./Login.scss";
+import { useState, useEffect, useRef } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import AppLinks from '../../components/AppLinks/AppLinks';
+import PhoneSlide from '../../components/PhoneSlide/PhoneSlide';
+import './Login.scss';
 
 export default function Login() {
   let history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const loginBt = useRef();
- useEffect(() => {
-    if (email !== "" && password !== "") {
+  useEffect(() => {
+    if (email !== '' && password !== '') {
       loginBt.current.disabled = false;
     } else {
       loginBt.current.disabled = true;
@@ -19,7 +19,7 @@ export default function Login() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    history.push("/home");
+    history.push('/home');
   };
   return (
     <div className="login">
@@ -33,7 +33,7 @@ export default function Login() {
             />
           </div>
           <form onSubmit={(e) => onSubmit(e)}>
-            <div className={`textInput ${email.length > 0 && "active"}`}>
+            <div className={`textInput ${email.length > 0 && 'active'}`}>
               <input
                 id="email"
                 type="text"
@@ -42,7 +42,7 @@ export default function Login() {
               />
               <label for="email">Phone number, username or email</label>
             </div>
-            <div className={`textInput ${password.length > 0 && "active"}`}>
+            <div className={`textInput ${password.length > 0 && 'active'}`}>
               <input
                 id="password"
                 type="password"
@@ -74,10 +74,7 @@ export default function Login() {
         <div className="siginMiniPanel">
           <span>Don't have an account? </span>
           <span>
-            <Link
-              to="/signin"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
+            <Link to="/signin" style={{ textDecoration: 'none', color: 'inherit' }}>
               Sign up
             </Link>
           </span>
@@ -86,4 +83,4 @@ export default function Login() {
       </div>
     </div>
   );
-};
+}

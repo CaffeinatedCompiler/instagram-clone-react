@@ -1,6 +1,12 @@
-import { More } from "../icons";
-import "./FromMessage.scss";
-export default function FromMessage({ userImage, message }: {userImage: string, message: string}){
+import { More } from '../icons';
+import './FromMessage.scss';
+export default function FromMessage({
+  userImage,
+  message,
+}: {
+  userImage: string;
+  message: string;
+}) {
   return (
     <div className="fromMessageItem">
       <img src={userImage} alt="chatHeaderAvatar" />
@@ -10,4 +16,4 @@ export default function FromMessage({ userImage, message }: {userImage: string, 
       <More />
     </div>
   );
-};
+}

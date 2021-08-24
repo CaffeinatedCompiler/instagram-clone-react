@@ -1,11 +1,11 @@
-import { Switch, Route } from "react-router-dom";
-import "./App.css";
-import Direct from "./pages/Direct/Direct";
-import Explore from "./pages/Explore/Explore";
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login";
-import Profile from "./pages/Profile/Profile";
-import Signin from "./pages/Signin/Signin";
+import { Switch, Route } from 'react-router-dom';
+import './App.css';
+import Direct from './pages/Direct/Direct';
+import Explore from './pages/Explore/Explore';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import Profile from './pages/Profile/Profile';
+import Signin from './pages/Signin/Signin';
 
 export default function App() {
   return (

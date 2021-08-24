@@ -1,5 +1,5 @@
-import "./NotificationCardItem.scss";
-export default function ThisWeekItem(){
+import './NotificationCardItem.scss';
+export default function ThisWeekItem() {
   return (
     <div className="notificationCardItem">
       <div className="notificationCardItemAvatar">
@@ -15,5 +15,4 @@ export default function ThisWeekItem(){
       </div>
     </div>
   );
-};
-
+}

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export default function Settings(props) {
   return (
@@ -15,4 +15,3 @@ export default function Settings(props) {
     </svg>
   );
 }
-

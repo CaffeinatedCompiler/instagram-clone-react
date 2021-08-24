@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import { useDispatch } from "react-redux";
-import { addMessageAction } from "../../redux/actions/messagesAction";
-import { Heart, Photo, Smile } from "../icons";
-import "./ChatInputs.scss";
+import { useDispatch } from 'react-redux';
+import { addMessageAction } from '../../redux/actions/messagesAction';
+import { Heart, Photo, Smile } from '../icons';
+import './ChatInputs.scss';
 
-export default function ChatInputs({ to }: {to: string}) {
+export default function ChatInputs({ to }: { to: string }) {
   const dispatch = useDispatch();
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
   const sendMessage = (e) => {
-    if (e.key === "Enter") {
-      if (to !== "" && message !== "") {
-        dispatch(addMessageAction(message, "mucahitsahin", to));
-        setMessage("");
+    if (e.key === 'Enter') {
+      if (to !== '' && message !== '') {
+        dispatch(addMessageAction(message, 'mucahitsahin', to));
+        setMessage('');
       }
     }
   };
@@ -31,4 +31,4 @@ export default function ChatInputs({ to }: {to: string}) {
       </div>
     </div>
   );
-};
+}

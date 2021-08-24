@@ -1,13 +1,13 @@
-import NewMessage from "../../components/NewMessage/NewMessage";
-import HomeBox from "../../components/HomeBox/HomeBox";
-import "./Direct.scss";
-import LastMessages from "../../components/LastMessages/LastMessages";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router";
-import Chat from "../../components/Chat/Chat";
+import NewMessage from '../../components/NewMessage/NewMessage';
+import HomeBox from '../../components/HomeBox/HomeBox';
+import './Direct.scss';
+import LastMessages from '../../components/LastMessages/LastMessages';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router';
+import Chat from '../../components/Chat/Chat';
 
-export default function Direct () {
-  const { id } = useParams<{id: string}>();
+export default function Direct() {
+  const { id } = useParams<{ id: string }>();
   let messages = useSelector((state) => state.messages);
   let users = useSelector((state) => state.users);
   return (
@@ -18,4 +18,4 @@ export default function Direct () {
       </div>
     </HomeBox>
   );
-};
+}

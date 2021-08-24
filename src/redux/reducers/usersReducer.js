@@ -1,4 +1,4 @@
-import users from "../../data/users";
+import users from '../../data/users';
 
 const initialState = users;
 function usersReducer(state = initialState, action) {
