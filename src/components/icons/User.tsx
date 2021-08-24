@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
-export default function User(props) {
+export default function User(props: ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       aria-label="Profil"

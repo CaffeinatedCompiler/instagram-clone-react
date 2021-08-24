@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
-export default function Change(props) {
+export default function Change(props: ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       aria-label="Hesap De\u011Fi\u015Ftir"

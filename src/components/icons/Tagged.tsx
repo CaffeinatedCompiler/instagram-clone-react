@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
-export default function Tagged(props) {
+export default function Tagged(props: ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       aria-label="Tagged"

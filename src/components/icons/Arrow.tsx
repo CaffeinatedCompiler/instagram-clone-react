@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
-export default function Arrow(props) {
+export default function Arrow(props: ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       aria-label="Chevron icon to see all Follow Requests"

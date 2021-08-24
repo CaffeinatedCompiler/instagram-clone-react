@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
-export default function More(props) {
+export default function More(props: ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       aria-label="More options"

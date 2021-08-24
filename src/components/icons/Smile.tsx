@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
-export default function Smile(props) {
+export default function Smile(props: ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       aria-label="Emoji"

@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
-export default function Info(props) {
+export default function Info(props: ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       aria-label="View Thread Details"

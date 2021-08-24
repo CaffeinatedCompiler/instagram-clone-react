@@ -1,6 +1,6 @@
-import * as React from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
-export default function Igtv(props) {
+export default function Igtv(props: ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
       aria-label="Posts"
