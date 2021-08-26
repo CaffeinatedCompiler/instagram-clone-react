@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from 'react';
 
-export default function DirectIcon(props: { active: boolean } & ComponentPropsWithoutRef<'svg'>) {
+export default function DirectIcon(props: { active?: boolean } & ComponentPropsWithoutRef<'svg'>) {
   if (props.active) {
     return (
       <svg fill="#262626" height={22} viewBox="0 0 48 48" width={22} {...props}>
