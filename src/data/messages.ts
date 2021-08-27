@@ -1,4 +1,6 @@
-export const messages = [
+import { MessageData } from "../types";
+
+export const messages: MessageData[] = [
   {
     from: 'mucahitsahin',
     to: 'cnecati',

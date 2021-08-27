@@ -1,4 +1,6 @@
-const posts = [
+import { Post } from "../types";
+
+export const posts: Post[] = [
   {
     id: 1,
     username: 'mucahitsah',
@@ -23,4 +25,3 @@ const posts = [
     comments: [{ id: 102, comment: 'react', username: 'yasin' }],
   },
 ];
-export default posts;

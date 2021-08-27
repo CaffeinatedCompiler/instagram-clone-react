@@ -1,4 +1,6 @@
-const users = [
+import { User } from "../types";
+
+const users: User[] = [
   {
     username: 'mucahitsahin',
     userimage:
