@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, SyntheticEvent } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import AppLinks from '../../components/AppLinks/AppLinks';
 import './Signin.scss';
 export default function Signin() {
-  const loginBt = useRef();
+  const loginBt = useRef<HTMLButtonElement>(null);
   let history = useHistory();
   const [email, setEmail] = useState('');
   const [displayName, setDisplayName] = useState('');
@@ -15,9 +15,9 @@ export default function Signin() {
     } else {
       loginBt.current.disabled = true;
     }
-  }, [email, password]);
+  }, [email, password, displayName, username]);
 
-  const onSubmit = (e) => {
+  const onSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
     history.push('/home');
   };
@@ -52,7 +52,7 @@ export default function Signin() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label for="email">Mobile Number or Email</label>
+            <label htmlFor="email">Mobile Number or Email</label>
           </div>
           <div className={`textInput ${displayName.length > 0 && 'active'}`}>
             <input
@@ -61,7 +61,7 @@ export default function Signin() {
               value={displayName}
               onChange={(e) => setDisplayName(e.target.value)}
             />
-            <label for="displayName">Full Name</label>
+            <label htmlFor="displayName">Full Name</label>
           </div>
           <div className={`textInput ${username.length > 0 && 'active'}`}>
             <input
@@ -70,7 +70,7 @@ export default function Signin() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-            <label for="username">Username</label>
+            <label htmlFor="username">Username</label>
           </div>
           <div className={`textInput ${password.length > 0 && 'active'}`}>
             <input
@@ -79,7 +79,7 @@ export default function Signin() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
           </div>
           <div className="signinBt">
             <button ref={loginBt} disabled>

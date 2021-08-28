@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { KeyboardEvent, useState } from 'react';
+import { useAppDispatch } from '../../hooks/hooks'
 import { addMessageAction } from '../../redux/actions/messagesAction';
 import { Heart, Photo, Smile } from '../icons';
 import './ChatInputs.scss';
 
 export default function ChatInputs({ to }: { to: string }) {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [message, setMessage] = useState('');
-  const sendMessage = (e) => {
+  const sendMessage = (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
       if (to !== '' && message !== '') {
         dispatch(addMessageAction(message, 'mucahitsahin', to));

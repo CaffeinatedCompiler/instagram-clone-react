@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, SyntheticEvent } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import AppLinks from '../../components/AppLinks/AppLinks';
 import PhoneSlide from '../../components/PhoneSlide/PhoneSlide';
@@ -8,16 +8,18 @@ export default function Login() {
   let history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const loginBt = useRef();
+  const loginBt = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     if (email !== '' && password !== '') {
+      if(!loginBt.current) throw Error('Ref not available')
       loginBt.current.disabled = false;
     } else {
+      if(!loginBt.current) throw Error('Ref not available')
       loginBt.current.disabled = true;
     }
   }, [email, password]);
 
-  const onSubmit = (e) => {
+  const onSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
     history.push('/home');
   };
@@ -40,7 +42,7 @@ export default function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <label for="email">Phone number, username or email</label>
+              <label htmlFor="email">Phone number, username or email</label>
             </div>
             <div className={`textInput ${password.length > 0 && 'active'}`}>
               <input
@@ -49,7 +51,7 @@ export default function Login() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <label for="password">Password</label>
+              <label htmlFor="password">Password</label>
             </div>
             <div className="loginBt">
               <button ref={loginBt} disabled>

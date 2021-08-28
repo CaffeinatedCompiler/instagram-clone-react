@@ -28,6 +28,7 @@ export interface MessageData {
 }
 
 export interface Message {
+  to: string;
   message: string;
   from: string;
 }

@@ -14,7 +14,7 @@ const Navbar = () => {
     if (path === '/home') setActiveIcon(1);
     else if (path === '/direct' || path.split('/')[1] === 'direct') setActiveIcon(2);
     else if (path === '/explore') setActiveIcon(3);
-  }, []);
+  }, [path]);
   return (
     <nav>
       <div className="navbar">
@@ -32,7 +32,7 @@ const Navbar = () => {
             onChange={(e) => setSearchValue(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && history.push('/' + searchValue)}
           />
-          <label for="searchInput">Search</label>
+          <label htmlFor="searchInput">Search</label>
         </div>
         <div className="navMenu">
           <Link to="/home" onClick={() => setActiveIcon(1)}>
@@ -45,6 +45,7 @@ const Navbar = () => {
             <Explore active={activeIcon === 3 && true} />
           </Link>
           <Link
+            to=""
             className="heart"
             onClick={() => {
               setNotificationOpen(true);
