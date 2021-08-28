@@ -1,5 +1,5 @@
-import './Suggestions.scss';
-import SuggestionUsersItem from './SuggestionUsersItem/SuggestionUsersItem';
+import './Suggestions.scss'
+import SuggestionUsersItem from './SuggestionUsersItem/SuggestionUsersItem'
 const Suggestions = () => {
   return (
     <div className="suggestions">
@@ -43,7 +43,7 @@ const Suggestions = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Suggestions;
+export default Suggestions

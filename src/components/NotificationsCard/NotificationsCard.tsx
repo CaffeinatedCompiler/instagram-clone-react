@@ -1,6 +1,6 @@
-import { Arrow } from '../icons';
-import './NotificationsCard.scss';
-import NotificationCardItem from './NotificationCardItem/NotificationCardItem';
+import { Arrow } from '../icons'
+import './NotificationsCard.scss'
+import NotificationCardItem from './NotificationCardItem/NotificationCardItem'
 
 export default function NotificationsCard() {
   return (
@@ -28,5 +28,5 @@ export default function NotificationsCard() {
         <NotificationCardItem />
       </div>
     </div>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import './AppLinks.scss';
+import './AppLinks.scss'
 export default function AppLinks() {
   return (
     <div className="appLinks">
@@ -14,5 +14,5 @@ export default function AppLinks() {
         />
       </div>
     </div>
-  );
+  )
 }

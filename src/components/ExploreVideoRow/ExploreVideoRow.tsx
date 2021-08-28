@@ -1,4 +1,4 @@
-import './ExploreVideoRow.scss';
+import './ExploreVideoRow.scss'
 
 export default function ExploreVideoRow() {
   return (
@@ -17,5 +17,5 @@ export default function ExploreVideoRow() {
         </div>
       </div>
     </div>
-  );
+  )
 }

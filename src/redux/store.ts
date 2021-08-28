@@ -1,7 +1,7 @@
-import { createStore } from 'redux';
-import reducers from './reducers';
+import { createStore } from 'redux'
+import reducers from './reducers'
 
-export const store = createStore(reducers);
+export const store = createStore(reducers)
 
 export type RootState = ReturnType<typeof store.getState>
 

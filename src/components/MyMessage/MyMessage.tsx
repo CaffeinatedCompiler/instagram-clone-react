@@ -1,5 +1,5 @@
-import { More } from '../icons';
-import './MyMessage.scss';
+import { More } from '../icons'
+import './MyMessage.scss'
 const MyMessage = ({ message }: { message: string }) => {
   return (
     <div className="myMessageItem">
@@ -8,7 +8,7 @@ const MyMessage = ({ message }: { message: string }) => {
         <span>{message}</span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MyMessage;
+export default MyMessage

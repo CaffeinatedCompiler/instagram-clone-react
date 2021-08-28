@@ -1,4 +1,4 @@
-import { Post } from "../types";
+import { Post } from '../types'
 
 export const posts: Post[] = [
   {
@@ -24,4 +24,4 @@ export const posts: Post[] = [
     description: 'Güzel bir gün',
     comments: [{ id: 102, comment: 'react', username: 'yasin' }],
   },
-];
+]

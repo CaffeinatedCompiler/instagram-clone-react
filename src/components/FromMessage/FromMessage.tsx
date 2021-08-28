@@ -1,11 +1,11 @@
-import { More } from '../icons';
-import './FromMessage.scss';
+import { More } from '../icons'
+import './FromMessage.scss'
 export default function FromMessage({
   userImage,
   message,
 }: {
-  userImage: string;
-  message: string;
+  userImage: string
+  message: string
 }) {
   return (
     <div className="fromMessageItem">
@@ -15,5 +15,5 @@ export default function FromMessage({
       </div>
       <More />
     </div>
-  );
+  )
 }

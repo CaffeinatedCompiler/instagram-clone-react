@@ -1,11 +1,11 @@
-import users from '../../data/users';
+import users from '../../data/users'
 
-const initialState = users;
+const initialState = users
 type UserAction = { type: string }
 function usersReducer(state = initialState, action: UserAction) {
   switch (action.type) {
     default:
-      return state;
+      return state
   }
 }
-export default usersReducer;
+export default usersReducer

@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef } from 'react'
 
 export default function Posts(props: ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -17,5 +17,5 @@ export default function Posts(props: ComponentPropsWithoutRef<'svg'>) {
         fillRule="evenodd"
       />
     </svg>
-  );
+  )
 }

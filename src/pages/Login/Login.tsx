@@ -1,28 +1,28 @@
-import { useState, useEffect, useRef, SyntheticEvent } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import AppLinks from '../../components/AppLinks/AppLinks';
-import PhoneSlide from '../../components/PhoneSlide/PhoneSlide';
-import './Login.scss';
+import { useState, useEffect, useRef, SyntheticEvent } from 'react'
+import { Link, useHistory } from 'react-router-dom'
+import AppLinks from '../../components/AppLinks/AppLinks'
+import PhoneSlide from '../../components/PhoneSlide/PhoneSlide'
+import './Login.scss'
 
 export default function Login() {
-  let history = useHistory();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const loginBt = useRef<HTMLButtonElement>(null);
+  let history = useHistory()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const loginBt = useRef<HTMLButtonElement>(null)
   useEffect(() => {
     if (email !== '' && password !== '') {
-      if(!loginBt.current) throw Error('Ref not available')
-      loginBt.current.disabled = false;
+      if (!loginBt.current) throw Error('Ref not available')
+      loginBt.current.disabled = false
     } else {
-      if(!loginBt.current) throw Error('Ref not available')
-      loginBt.current.disabled = true;
+      if (!loginBt.current) throw Error('Ref not available')
+      loginBt.current.disabled = true
     }
-  }, [email, password]);
+  }, [email, password])
 
   const onSubmit = (e: SyntheticEvent) => {
-    e.preventDefault();
-    history.push('/home');
-  };
+    e.preventDefault()
+    history.push('/home')
+  }
   return (
     <div className="login">
       <PhoneSlide />
@@ -84,5 +84,5 @@ export default function Login() {
         <AppLinks />
       </div>
     </div>
-  );
+  )
 }

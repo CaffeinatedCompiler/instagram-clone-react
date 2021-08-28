@@ -1,12 +1,12 @@
-import './SuggestionUsersItem.scss';
+import './SuggestionUsersItem.scss'
 const SuggestionUsersItem = ({
   userImage,
   username,
   displayName,
 }: {
-  userImage: string;
-  username: string;
-  displayName: string;
+  userImage: string
+  username: string
+  displayName: string
 }) => {
   return (
     <div className="suggestionUsersItem">
@@ -19,7 +19,7 @@ const SuggestionUsersItem = ({
       </div>
       <button>Follow</button>
     </div>
-  );
-};
+  )
+}
 
-export default SuggestionUsersItem;
+export default SuggestionUsersItem

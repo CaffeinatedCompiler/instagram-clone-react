@@ -1,11 +1,11 @@
-import { posts } from '../../data/posts';
+import { posts } from '../../data/posts'
 
-const initialState = posts;
+const initialState = posts
 type PostAction = { type: string }
 function postsReducer(state = initialState, action: PostAction) {
   switch (action.type) {
     default:
-      return state;
+      return state
   }
 }
-export default postsReducer;
+export default postsReducer

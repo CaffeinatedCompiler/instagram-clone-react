@@ -1,5 +1,5 @@
-import { Direct } from '../icons';
-import './NewMessage.scss';
+import { Direct } from '../icons'
+import './NewMessage.scss'
 const NewMessage = () => {
   return (
     <div className="newMessage">
@@ -8,7 +8,7 @@ const NewMessage = () => {
       <span>Send private photos and messages to a friend or group.</span>
       <button>Send Message</button>
     </div>
-  );
-};
+  )
+}
 
-export default NewMessage;
+export default NewMessage

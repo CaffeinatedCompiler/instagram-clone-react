@@ -1,17 +1,17 @@
-import { useParams } from 'react-router';
-import { Arrow } from '../icons';
-import LastMessagesItem from '../LastMessagesItem/LastMessagesItem';
-import BottomNavigation from '../BottomNavigation/BottomNavigation';
-import { MessageData, User } from '../../types/index';
-import './LastMessages.scss';
+import { useParams } from 'react-router'
+import { Arrow } from '../icons'
+import LastMessagesItem from '../LastMessagesItem/LastMessagesItem'
+import BottomNavigation from '../BottomNavigation/BottomNavigation'
+import { MessageData, User } from '../../types/index'
+import './LastMessages.scss'
 export default function LastMessages({
   messages,
   users,
 }: {
-  messages: MessageData[];
-  users: User[];
+  messages: MessageData[]
+  users: User[]
 }) {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams<{ id: string }>()
   return (
     <div className={`lastMessagesCol ${id && 'hide'}`}>
       <div className="lastMessagesHeader">
@@ -20,7 +20,7 @@ export default function LastMessages({
       </div>
       <div className="lastMessages">
         {messages.map((message) => {
-          const user = users.find((user) => user.username === message.to);
+          const user = users.find((user) => user.username === message.to)
           if (user) {
             return (
               <LastMessagesItem
@@ -28,11 +28,11 @@ export default function LastMessages({
                 userImage={user.userimage}
                 lastMessage={message.messages.slice(-1)[0].message}
               />
-            );
+            )
           }
         })}
         <BottomNavigation />
       </div>
     </div>
-  );
+  )
 }

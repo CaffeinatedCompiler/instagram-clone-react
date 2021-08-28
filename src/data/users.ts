@@ -1,4 +1,4 @@
-import { User } from "../types";
+import { User } from '../types'
 
 const users: User[] = [
   {
@@ -33,6 +33,6 @@ const users: User[] = [
     joinYear: 2012,
     joinMonth: 'April',
   },
-];
+]
 
-export default users;
+export default users

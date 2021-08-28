@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef } from 'react'
 
 export default function Discovery(props: { active?: boolean } & ComponentPropsWithoutRef<'svg'>) {
   if (props.active) {
@@ -10,7 +10,7 @@ export default function Discovery(props: { active?: boolean } & ComponentPropsWi
           fillRule="evenodd"
         />
       </svg>
-    );
+    )
   }
   return (
     <svg
@@ -28,5 +28,5 @@ export default function Discovery(props: { active?: boolean } & ComponentPropsWi
         fillRule="evenodd"
       />
     </svg>
-  );
+  )
 }

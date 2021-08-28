@@ -1,4 +1,4 @@
-import './NotificationCardItem.scss';
+import './NotificationCardItem.scss'
 export default function ThisWeekItem() {
   return (
     <div className="notificationCardItem">
@@ -14,5 +14,5 @@ export default function ThisWeekItem() {
         <img src="https://picsum.photos/200" alt="post" />
       </div>
     </div>
-  );
+  )
 }

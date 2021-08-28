@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef } from 'react'
 
 export default function Add(props: { active?: boolean } & ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -7,5 +7,5 @@ export default function Add(props: { active?: boolean } & ComponentPropsWithoutR
       <path d="M36.3 25.5H11.7c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h24.6c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5z" />
       <path d="M24 37.8c-.8 0-1.5-.7-1.5-1.5V11.7c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5v24.6c0 .8-.7 1.5-1.5 1.5z" />
     </svg>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import './BottomNavigation.scss';
-import { Link, useLocation } from 'react-router-dom';
-import { Home as HomeIcon, User, Heart, Search, Add } from '../icons';
+import './BottomNavigation.scss'
+import { Link, useLocation } from 'react-router-dom'
+import { Home as HomeIcon, User, Heart, Search, Add } from '../icons'
 
 export default function BottomNavigation() {
-  const { pathname } = useLocation();
+  const { pathname } = useLocation()
   return (
     <nav className="bottom-navigation">
       <Link className="bottom-menu-item" to="/home">
@@ -22,5 +22,5 @@ export default function BottomNavigation() {
         <User active={pathname === '/user'} />
       </Link>
     </nav>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef } from 'react'
 
 export default function More(props: ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -15,5 +15,5 @@ export default function More(props: ComponentPropsWithoutRef<'svg'>) {
       <circle clipRule="evenodd" cx={24} cy={24} fillRule="evenodd" r={4.5} />
       <circle clipRule="evenodd" cx={40} cy={24} fillRule="evenodd" r={4.5} />
     </svg>
-  );
+  )
 }

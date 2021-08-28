@@ -1,15 +1,15 @@
-import { Comment, Direct, Heart, More, Saved, Smile } from '../icons';
-import './Post.scss';
+import { Comment, Direct, Heart, More, Saved, Smile } from '../icons'
+import './Post.scss'
 const Post = ({
   userImage,
   username,
   postImage,
   postDescription,
 }: {
-  userImage: string;
-  username: string;
-  postImage: string;
-  postDescription: string;
+  userImage: string
+  username: string
+  postImage: string
+  postDescription: string
 }) => {
   return (
     <article className="post">
@@ -74,7 +74,7 @@ const Post = ({
         </div>
       </div>
     </article>
-  );
-};
+  )
+}
 
-export default Post;
+export default Post

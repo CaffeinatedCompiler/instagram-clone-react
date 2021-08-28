@@ -1,20 +1,20 @@
-import { useState, useEffect } from 'react';
-import './Navbar.scss';
-import { Link, useHistory, useLocation } from 'react-router-dom';
-import { Change, Direct, Explore, Heart, Home as HomeIcon, Saved, Settings, User } from '../icons';
-import NotificationsCard from '../NotificationsCard/NotificationsCard';
+import { useState, useEffect } from 'react'
+import './Navbar.scss'
+import { Link, useHistory, useLocation } from 'react-router-dom'
+import { Change, Direct, Explore, Heart, Home as HomeIcon, Saved, Settings, User } from '../icons'
+import NotificationsCard from '../NotificationsCard/NotificationsCard'
 const Navbar = () => {
-  let path = useLocation().pathname;
-  let history = useHistory();
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [notificationOpen, setNotificationOpen] = useState(false);
-  const [activeIcon, setActiveIcon] = useState(1);
-  const [searchValue, setSearchValue] = useState('');
+  let path = useLocation().pathname
+  let history = useHistory()
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [notificationOpen, setNotificationOpen] = useState(false)
+  const [activeIcon, setActiveIcon] = useState(1)
+  const [searchValue, setSearchValue] = useState('')
   useEffect(() => {
-    if (path === '/home') setActiveIcon(1);
-    else if (path === '/direct' || path.split('/')[1] === 'direct') setActiveIcon(2);
-    else if (path === '/explore') setActiveIcon(3);
-  }, [path]);
+    if (path === '/home') setActiveIcon(1)
+    else if (path === '/direct' || path.split('/')[1] === 'direct') setActiveIcon(2)
+    else if (path === '/explore') setActiveIcon(3)
+  }, [path])
   return (
     <nav>
       <div className="navbar">
@@ -48,8 +48,8 @@ const Navbar = () => {
             to=""
             className="heart"
             onClick={() => {
-              setNotificationOpen(true);
-              setActiveIcon(4);
+              setNotificationOpen(true)
+              setActiveIcon(4)
             }}
           >
             <Heart active={notificationOpen && true} />
@@ -58,8 +58,8 @@ const Navbar = () => {
           <div
             className={`closePanel ${menuOpen || notificationOpen ? 'active' : ''}`}
             onClick={() => {
-              setMenuOpen(false);
-              setNotificationOpen(false);
+              setMenuOpen(false)
+              setNotificationOpen(false)
             }}
           ></div>
           <div className="navProfilePhoto" onClick={() => setMenuOpen(true)}>
@@ -100,7 +100,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

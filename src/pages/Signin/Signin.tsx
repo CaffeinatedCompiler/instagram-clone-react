@@ -1,26 +1,26 @@
-import { useState, useEffect, useRef, SyntheticEvent } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import AppLinks from '../../components/AppLinks/AppLinks';
-import './Signin.scss';
+import { useState, useEffect, useRef, SyntheticEvent } from 'react'
+import { Link, useHistory } from 'react-router-dom'
+import AppLinks from '../../components/AppLinks/AppLinks'
+import './Signin.scss'
 export default function Signin() {
-  const loginBt = useRef<HTMLButtonElement>(null);
-  let history = useHistory();
-  const [email, setEmail] = useState('');
-  const [displayName, setDisplayName] = useState('');
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const loginBt = useRef<HTMLButtonElement>(null)
+  let history = useHistory()
+  const [email, setEmail] = useState('')
+  const [displayName, setDisplayName] = useState('')
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
   useEffect(() => {
     if (email !== '' && password !== '' && username !== '' && displayName !== '') {
-      loginBt.current.disabled = false;
+      loginBt.current.disabled = false
     } else {
-      loginBt.current.disabled = true;
+      loginBt.current.disabled = true
     }
-  }, [email, password, displayName, username]);
+  }, [email, password, displayName, username])
 
   const onSubmit = (e: SyntheticEvent) => {
-    e.preventDefault();
-    history.push('/home');
-  };
+    e.preventDefault()
+    history.push('/home')
+  }
 
   return (
     <div className="signin">
@@ -103,5 +103,5 @@ export default function Signin() {
 
       <AppLinks />
     </div>
-  );
+  )
 }
